@@ -88,7 +88,10 @@ class GPX: NSObject, XMLParserDelegate
         
         var url: URL? { return URL(string: href) }
         var text: String? { return linkattributes["text"] }
-        var type: String? { return linkattributes["type"] }
+        var type: String? {
+            get { return linkattributes["type"] }
+            set { linkattributes["type"] = newValue }
+            }
         
         var description: String {
             var descriptions = [String]()

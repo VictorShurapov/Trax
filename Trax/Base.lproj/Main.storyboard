@@ -39,7 +39,7 @@
                     <connections>
                         <outlet property="mapView" destination="Odl-Pj-3vG" id="GxA-Zk-heZ"/>
                         <segue destination="eFI-on-XOC" kind="show" identifier="Show Image" id="ha6-vs-6zT"/>
-                        <segue destination="Jhd-Ci-DGe" kind="popoverPresentation" identifier="Edit Waypoint" popoverAnchorView="Odl-Pj-3vG" id="8Ur-rG-Vvl">
+                        <segue destination="T8w-hg-zNS" kind="popoverPresentation" identifier="Edit Waypoint" popoverAnchorView="Odl-Pj-3vG" id="kmz-cf-GFU">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                         </segue>
                     </connections>
@@ -97,41 +97,59 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z3c-kK-O8h">
-                                <rect key="frame" x="71" y="76" width="288" height="30"/>
+                                <rect key="frame" x="71" y="32" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJq-GZ-HqD">
-                                <rect key="frame" x="16" y="79" width="45" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAL-qp-RkK">
-                                <rect key="frame" x="16" y="119" width="29" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJq-GZ-HqD">
+                                <rect key="frame" x="16" y="35" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Uc-tb-X8P">
-                                <rect key="frame" x="71" y="116" width="288" height="30"/>
+                                <rect key="frame" x="71" y="72" width="242" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAL-qp-RkK">
+                                <rect key="frame" x="32" y="75" width="29" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIU-VR-Lxi">
+                                <rect key="frame" x="16" y="110" width="343" height="549"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLf-bt-dEE">
+                                <rect key="frame" x="321" y="70" width="38" height="34"/>
+                                <state key="normal" image="Camera"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="T8w-hg-zNS" eventType="touchUpInside" id="tj4-0O-FoR"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zJq-GZ-HqD" firstAttribute="baseline" secondItem="Z3c-kK-O8h" secondAttribute="baseline" id="8vA-1d-alH"/>
                             <constraint firstItem="Z3c-kK-O8h" firstAttribute="leading" secondItem="zJq-GZ-HqD" secondAttribute="trailing" constant="10" id="BF8-1X-RQN"/>
                             <constraint firstItem="zJq-GZ-HqD" firstAttribute="leading" secondItem="IRI-4R-TFT" secondAttribute="leading" constant="16" id="Efn-9w-0hc"/>
                             <constraint firstItem="IRI-4R-TFT" firstAttribute="trailing" secondItem="Z3c-kK-O8h" secondAttribute="trailing" constant="16" id="KxB-XN-GaJ"/>
                             <constraint firstItem="BAL-qp-RkK" firstAttribute="baseline" secondItem="0Uc-tb-X8P" secondAttribute="baseline" id="L5k-vk-RPX"/>
-                            <constraint firstItem="BAL-qp-RkK" firstAttribute="leading" secondItem="IRI-4R-TFT" secondAttribute="leading" constant="16" id="S5c-nF-Ywv"/>
-                            <constraint firstItem="IRI-4R-TFT" firstAttribute="trailing" secondItem="0Uc-tb-X8P" secondAttribute="trailing" constant="16" id="fFU-fe-e7E"/>
+                            <constraint firstItem="IRI-4R-TFT" firstAttribute="trailing" secondItem="jIU-VR-Lxi" secondAttribute="trailing" constant="16" id="MWo-wV-qUt"/>
+                            <constraint firstItem="jIU-VR-Lxi" firstAttribute="top" secondItem="0Uc-tb-X8P" secondAttribute="bottom" constant="8" id="NGA-2p-WKV"/>
+                            <constraint firstItem="BAL-qp-RkK" firstAttribute="leading" secondItem="IRI-4R-TFT" secondAttribute="leading" constant="32" id="S5c-nF-Ywv"/>
+                            <constraint firstItem="eLf-bt-dEE" firstAttribute="leading" secondItem="0Uc-tb-X8P" secondAttribute="trailing" constant="8" symbolic="YES" id="TTN-av-3IG"/>
+                            <constraint firstItem="eLf-bt-dEE" firstAttribute="centerY" secondItem="0Uc-tb-X8P" secondAttribute="centerY" id="X9u-kn-Ivr"/>
                             <constraint firstItem="0Uc-tb-X8P" firstAttribute="leading" secondItem="Z3c-kK-O8h" secondAttribute="leading" id="ffU-Za-lhV"/>
-                            <constraint firstItem="0Uc-tb-X8P" firstAttribute="leading" secondItem="BAL-qp-RkK" secondAttribute="trailing" constant="26" id="hOw-KG-vrU"/>
+                            <constraint firstItem="IRI-4R-TFT" firstAttribute="bottom" secondItem="jIU-VR-Lxi" secondAttribute="bottom" constant="8" id="fvs-s1-cCo"/>
+                            <constraint firstItem="0Uc-tb-X8P" firstAttribute="leading" secondItem="BAL-qp-RkK" secondAttribute="trailing" constant="10" id="hOw-KG-vrU"/>
+                            <constraint firstItem="jIU-VR-Lxi" firstAttribute="leading" secondItem="IRI-4R-TFT" secondAttribute="leading" constant="16" id="sCb-BQ-4F8"/>
+                            <constraint firstItem="IRI-4R-TFT" firstAttribute="trailing" secondItem="eLf-bt-dEE" secondAttribute="trailing" constant="16" id="uJa-0g-j6q"/>
+                            <constraint firstItem="eLf-bt-dEE" firstAttribute="top" secondItem="Z3c-kK-O8h" secondAttribute="bottom" constant="8" symbolic="YES" id="wDX-Z2-eoO"/>
                             <constraint firstItem="Z3c-kK-O8h" firstAttribute="top" secondItem="IRI-4R-TFT" secondAttribute="top" constant="12" id="x3d-oo-Chg"/>
                             <constraint firstItem="0Uc-tb-X8P" firstAttribute="top" secondItem="Z3c-kK-O8h" secondAttribute="bottom" constant="10" id="zb9-03-YCl"/>
                         </constraints>
@@ -145,6 +163,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="imageViewContainer" destination="jIU-VR-Lxi" id="2c9-AU-DL8"/>
                         <outlet property="infoTextField" destination="0Uc-tb-X8P" id="yjq-nT-HqM"/>
                         <outlet property="nameTextField" destination="Z3c-kK-O8h" id="DpH-Cc-tKL"/>
                     </connections>
@@ -190,4 +209,10 @@
             <point key="canvasLocation" x="1064.8" y="115.59220389805098"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Camera" width="38" height="30"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="kmz-cf-GFU"/>
+    </inferredMetricsTieBreakers>
 </document>

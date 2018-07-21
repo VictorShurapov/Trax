@@ -50,6 +50,7 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
             let coordinate = mapView.convert(sender.location(in: mapView), toCoordinateFrom: mapView)
             let waypoint = EditableWaypoint(latitude: coordinate.latitude, longitude: coordinate.longitude)
             waypoint.name = "Dropped"
+            waypoint.links.append(GPX.Link(href: "http:/cs193p.stanford.edu/Images/Panorama.jpg"))
             mapView.addAnnotation(waypoint)
         }
     }
@@ -84,18 +85,24 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         if let waypoint = view.annotation as? GPX.Waypoint {
+            if waypoint.thumbnailURL != nil {
+                if view.leftCalloutAccessoryView == nil {
+                    view.leftCalloutAccessoryView = UIButton(frame: Constants.LeftCalloutFrame)
+                }
+            }
             if let thumbnailImageButton = view.leftCalloutAccessoryView as? UIButton {
                 ///
                 DispatchQueue.global(qos: .userInitiated).async {
                     let thumbURL = waypoint.thumbnailURL!
                     let imageDataOpt = try? Data(contentsOf: thumbURL)
-                    DispatchQueue.main.async {
-                        if thumbURL == waypoint.thumbnailURL! {
+                    //
+                    if thumbURL == waypoint.thumbnailURL! {
+                        DispatchQueue.main.async {
                             guard let imageData = imageDataOpt else {
                                 thumbnailImageButton.setImage(nil, for: .normal)
                                 return
                             }
-                            thumbnailImageButton.setImage(UIImage(data: imageData), for: .normal) 
+                            thumbnailImageButton.setImage(UIImage(data: imageData), for: .normal)
                         }
                     }
                 }
@@ -120,7 +127,7 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
         switch segue.identifier {
         case Constants.ShowImageSegue:
             if let waypoint = (sender as? MKAnnotationView)?.annotation as? GPX.Waypoint {
-                if let ivc = segue.destination as? ImageViewController {
+                if let ivc = segue.destination.contentViewController as? ImageViewController {
                     ivc.imageURL = waypoint.imageURL
                     ivc.title = waypoint.name
                 }
@@ -181,10 +188,7 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
         static let AnnotationViewReuseIdentifier = "waypoint"
         static let ShowImageSegue = "Show Image"
         static let EditWaypointSegue = "Edit Waypoint"
-        static let EditWaypointPopoverWidth: CGFloat = 320
-
-        
-        
+        static let EditWaypointPopoverWidth: CGFloat = 320  
     }
 }
 

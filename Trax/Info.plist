@@ -3,7 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<string>en_US</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Used to make photo for waypoint</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
