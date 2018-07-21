@@ -127,7 +127,9 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
         switch segue.identifier {
         case Constants.ShowImageSegue:
             if let waypoint = (sender as? MKAnnotationView)?.annotation as? GPX.Waypoint {
-                if let ivc = segue.destination.contentViewController as? ImageViewController {
+                if let wivc = segue.destination.contentViewController as? WaypointImageViewController {
+                    wivc.waypoint = waypoint
+                } else if let ivc = segue.destination.contentViewController as? ImageViewController {
                     ivc.imageURL = waypoint.imageURL
                     ivc.title = waypoint.name
                 }

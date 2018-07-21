@@ -10,6 +10,8 @@
 		5434DA2220DD45E300A382D1 /* EditWaypointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5434DA2120DD45E300A382D1 /* EditWaypointViewController.swift */; };
 		54362A9E20CC2E5000BAF32F /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54362A9D20CC2E5000BAF32F /* ImageViewController.swift */; };
 		543785F920CAE98B007443C8 /* MKGPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543785F820CAE98B007443C8 /* MKGPX.swift */; };
+		54B2FA0C210369B4008EBB5C /* WaypointImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B2FA0B210369B4008EBB5C /* WaypointImageViewController.swift */; };
+		54B2FA0E21036F52008EBB5C /* SimpleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B2FA0D21036F52008EBB5C /* SimpleMapViewController.swift */; };
 		54C080FA2049A6050099B6E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C080F92049A6050099B6E8 /* AppDelegate.swift */; };
 		54C080FC2049A6050099B6E8 /* GPXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C080FB2049A6050099B6E8 /* GPXViewController.swift */; };
 		54C080FF2049A6050099B6E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54C080FD2049A6050099B6E8 /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 		5434DA2120DD45E300A382D1 /* EditWaypointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWaypointViewController.swift; sourceTree = "<group>"; };
 		54362A9D20CC2E5000BAF32F /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		543785F820CAE98B007443C8 /* MKGPX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKGPX.swift; sourceTree = "<group>"; };
+		54B2FA0B210369B4008EBB5C /* WaypointImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaypointImageViewController.swift; sourceTree = "<group>"; };
+		54B2FA0D21036F52008EBB5C /* SimpleMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMapViewController.swift; sourceTree = "<group>"; };
 		54C080F62049A6050099B6E8 /* Trax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54C080F92049A6050099B6E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54C080FB2049A6050099B6E8 /* GPXViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXViewController.swift; sourceTree = "<group>"; };
@@ -67,8 +71,10 @@
 				5434DA2120DD45E300A382D1 /* EditWaypointViewController.swift */,
 				54C798B420C2C7A3004E5256 /* GPX.swift */,
 				54362A9D20CC2E5000BAF32F /* ImageViewController.swift */,
+				54B2FA0B210369B4008EBB5C /* WaypointImageViewController.swift */,
 				54C080F92049A6050099B6E8 /* AppDelegate.swift */,
 				54C080FD2049A6050099B6E8 /* Main.storyboard */,
+				54B2FA0D21036F52008EBB5C /* SimpleMapViewController.swift */,
 				54C081002049A6050099B6E8 /* Assets.xcassets */,
 				54C081022049A6050099B6E8 /* LaunchScreen.storyboard */,
 				54C081052049A6050099B6E8 /* Info.plist */,
@@ -149,11 +155,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				54C080FC2049A6050099B6E8 /* GPXViewController.swift in Sources */,
+				54B2FA0C210369B4008EBB5C /* WaypointImageViewController.swift in Sources */,
 				543785F920CAE98B007443C8 /* MKGPX.swift in Sources */,
 				5434DA2220DD45E300A382D1 /* EditWaypointViewController.swift in Sources */,
 				54362A9E20CC2E5000BAF32F /* ImageViewController.swift in Sources */,
 				54C080FA2049A6050099B6E8 /* AppDelegate.swift in Sources */,
 				54C798B620C2C7A3004E5256 /* GPX.swift in Sources */,
+				54B2FA0E21036F52008EBB5C /* SimpleMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
